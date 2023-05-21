@@ -1,4 +1,4 @@
-#include "includes/utilities.h"
+#include "utilities.hpp"
 
 //Recursive implementation of sieve of Erathosthenes
 std::vector<bool> SieveOfEratosthenes(int n) {
@@ -17,7 +17,7 @@ std::vector<bool> SieveOfEratosthenes(int n) {
 }
 
 int generatePrime() {
-    const int limit = 1000;
+    const int limit = 1000; //arbitrary
     std::vector<bool> prime = SieveOfEratosthenes(limit);
 
     std::vector<int> primes;
@@ -50,5 +50,5 @@ int calculateGCD(int a, int b){
 
 int calculateModularInverse(int a, int m){
     //TODO
-    return 0;
+    return a * m;
 }

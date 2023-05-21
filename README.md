@@ -9,7 +9,7 @@ Prime numbers are generated using the Sieve Of Eratosthenes algorithm
 ## Usage
 
 ```C++
-./main
+./bin/exec
 ```
  When calling, make sure to either specify encryption or decryption with the flags "--encrypt" or "--decrypt"
 
@@ -17,10 +17,10 @@ This program is only designed to handle argument and will not work with other us
 
 **Examples:**
 ```C++
-./main --encrypt
+./bin/exec --encrypt
 ```
 ```C++
-./main --decrypt
+./bin/exec --decrypt
 ```
 
 ## Contributing

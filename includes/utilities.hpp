@@ -9,6 +9,6 @@
 std::vector<bool> SieveOfEratosthenes(int n);
 int generatePrime();
 int calculateGCD(int a, int b);
-int calculateModularInverse(long long int a, long long int m);
+int calculateModularInverse(int a, int m);
 
 #endif

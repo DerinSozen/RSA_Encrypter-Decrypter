@@ -2,8 +2,8 @@
 #include <string>
 #include <stdexcept>
 
-#include "includes/utilities.h"
-#include "includes/key_handling.h"
+#include "utilities.hpp"
+#include "key_handling.hpp"
 
 int main(int argc, char* const argv[]) {
     std::string passphrase, message;
