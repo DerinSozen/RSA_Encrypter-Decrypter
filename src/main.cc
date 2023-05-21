@@ -15,10 +15,8 @@ int main(int argc, char* const argv[]) {
     }
 
     if(strcmp(argv[1], "--encrypt") == 0){
-        
         //Check if keys can be found, if not make new values for all keys
         bool keysFound = retrieveKeys(e, n, d);
-
         if (!keysFound){
             int p = generatePrime();
             int q = generatePrime();

@@ -9,5 +9,6 @@
 
 bool retrieveKeys(int& e, int& n, int& d);
 void saveKeys(int e, int n, int d);
+bool is_empty(std::ifstream& pFile);
 
 #endif
