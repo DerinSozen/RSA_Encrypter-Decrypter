@@ -5,10 +5,10 @@ bool is_empty(std::ifstream& pFile){
 }
 
 bool retrieveKeys(int& e, int& n, int& d){
-    std::ifstream public_ifs("private_key.txt");
-    std::ifstream private_ifs("private_key.txt");
+    std::ifstream public_ifs("src/private_key.txt");
+    std::ifstream private_ifs("src/public_key.txt");
 
-    //if(!is_empty(public_ifs) || !is_empty(private_ifs)){return false;}
+    if(!is_empty(public_ifs) || !is_empty(private_ifs)){return false;}
 
     if (public_ifs.is_open() && private_ifs.is_open()) {
         public_ifs >> e;
@@ -25,7 +25,7 @@ bool retrieveKeys(int& e, int& n, int& d){
 }
 
 void saveKeys(int e, int n, int d){
-    std::ofstream public_ofs("public_key.txt");
+    std::ofstream public_ofs("src/public_key.txt");
     if (public_ofs.is_open()) {
         public_ofs << e << std::endl;
         public_ofs << n << std::endl;
@@ -35,7 +35,7 @@ void saveKeys(int e, int n, int d){
         std::cerr << "Unable to open public_key.txt" << std::endl;
     }
 
-    std::ofstream private_ofs("private_key.txt");
+    std::ofstream private_ofs("src/private_key.txt");
     if (private_ofs.is_open()) {
         private_ofs << d << std::endl;
         private_ofs << n << std::endl;
