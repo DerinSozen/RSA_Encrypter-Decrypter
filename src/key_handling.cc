@@ -1,7 +1,7 @@
 #include "key_handling.hpp"
 
 
-bool retrieveKeys(int& e, int& n, int& d){
+bool retrieveKeys(long long int& e, long long int& n, long long int& d){
     std::ifstream public_ifs("src/private_key.txt");
     std::ifstream private_ifs("src/public_key.txt");
 

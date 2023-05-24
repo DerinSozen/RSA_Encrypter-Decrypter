@@ -7,7 +7,7 @@
 #include <cmath>
 #include <vector>
 
-bool retrieveKeys(int& e, int& n, int& d);
+bool retrieveKeys(long long int& e, long long int& n, long long int& d);
 void saveKeys(int e, int n, int d);
 
 #endif
