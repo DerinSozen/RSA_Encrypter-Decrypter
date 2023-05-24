@@ -10,8 +10,7 @@ int main(int argc, char* const argv[]) {
     int e, n, d;
 
     if(argc != 2){
-        std::cout << "invalid usage, refer to documentation" << std::endl;
-        return 1;
+        std::cerr << "invalid usage, refer to documentation" << std::endl;
     }
 
     if(strcmp(argv[1], "--encrypt") == 0){
@@ -33,7 +32,6 @@ int main(int argc, char* const argv[]) {
             saveKeys(e, n, d);
         }
 
-
         // Get passphrase from user
         std::cout << "Enter passphrase: ";
         std::getline(std::cin, passphrase);
@@ -43,7 +41,7 @@ int main(int argc, char* const argv[]) {
         std::getline(std::cin, message);
 
         // Encrypt the message and display
-        std::string encryptedMessage = "test";
+        std::string encryptedMessage = encryptMessage(message, e, n);
         std::cout << "Encrypted message: " << encryptedMessage << std::endl;
         return 0;
     }

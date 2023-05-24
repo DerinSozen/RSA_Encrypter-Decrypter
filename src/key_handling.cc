@@ -1,14 +1,9 @@
 #include "key_handling.hpp"
 
-bool is_empty(std::ifstream& pFile){
-    return pFile.peek() == std::ifstream::traits_type::eof();
-}
 
 bool retrieveKeys(int& e, int& n, int& d){
     std::ifstream public_ifs("src/private_key.txt");
     std::ifstream private_ifs("src/public_key.txt");
-
-    if(!is_empty(public_ifs) || !is_empty(private_ifs)){return false;}
 
     if (public_ifs.is_open() && private_ifs.is_open()) {
         public_ifs >> e;
